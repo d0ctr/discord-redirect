@@ -8,7 +8,6 @@ def check_link_arg(index=0, name=None):
     def decorator(func):
         @wraps(func)
         def decorated_function(*args, **kwargs):
-            print(args)
             if len(args) == 0 and len(kwargs) == 0:
                 return 'Bad Request', 403
             if name is None:
