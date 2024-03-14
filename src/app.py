@@ -15,5 +15,9 @@ def app_redirect(link):
 
 @app.route('/<path:link>')
 @check_link_arg(name='link')
-def index(link):
+def redirect_index(link):
     return render_template('index.html', link=link)
+
+@app.route('/')
+def index():
+    return redirect('https://github.com/d0ctr/discord-redirect')
