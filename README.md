@@ -1,7 +1,25 @@
-Discord Link Opener
+Discord Link Redirect
 ===================
 
-Discord Link Opener is a Flask web application that provides a convenient way to open Discord links either in a web browser or in the desktop Discord application. It also includes basic input validation to prevent malicious links from being accessed.
+Usage
+----------------------
+
+To open a Discord link using this application, follow these steps:
+
+1.  Replace the domain part in your Discord URL to `dr.bldbr.club`. For example, change `https://discord.com/channels/@me` to `https://dr.bldbr.club/channels/@me`.
+2.  On the web interface, you'll see two buttons:
+    *   **Open in browser**: Click this button to open the Discord link in your web browser.
+    *   **Open in Discord**: Click this button to open the Discord link in the desktop Discord application (if installed).
+
+Alternatively, you can also access the Discord links directly using the following routes:
+
+*   To open a Discord link in the Discord app: `https://dr.bldbr.club/a/<path>`. For example, `https://discord.com/channels/@me` to `https://dr.bldbr.club/a/channels/@me`.
+
+About
+-----
+
+Discord Link Redirect is a Flask web application that provides a convenient way to open Discord links either in a web browser or in the desktop Discord application. It also includes basic input validation to prevent malicious links from being accessed.
+
 
 Features
 --------
@@ -39,19 +57,20 @@ On Unix or Linux:
 ```
     pip install -r requirements.txt
 ```
-Usage
+
+Running
 -----
 
 1.  Set the `PORT` environment variable to the desired port number:
 
 On Windows:
-
+```
     set PORT=5000
-
+```
 On Unix or Linux:
-
+```
     export PORT=5000
-
+```
 2.  Run the application:
 ```
     ./start.sh
