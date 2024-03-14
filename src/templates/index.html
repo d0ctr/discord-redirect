@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discord</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #5865F2;
+    }
+
+    .container {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo {
+      width: 124px;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: block;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 20px;
+      margin: 5px 0;
+      transition: background-color 0.3s ease;
+      width: 250px; /* Adjust the width as per your preference */
+    }
+
+    .open-browser {
+      background-color: #23272A;
+      color: #FFFFFF;
+    }
+
+    .open-discord {
+      background-color: #FFFFFF;
+      color: #23272A;
+    }
+
+    .open-browser:hover {
+      background-color: #36393F;
+    }
+
+    .open-discord:hover {
+      background-color: #DCDDDE;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/653714c18aeaa62dfe96cd3f_636e0b5493894cf60b300587_full_logo_white_RGB.svg" alt="Discord Logo" class="logo">
+    <a href="https://discord.com/{{ link }}" class="button open-browser">Open in browser</a>
+    <a href="dsicord://discord.com/{{ link }}" class="button open-discord">Open in Discord</a>
+  </div>
+</body>
+</html>
