@@ -21,3 +21,7 @@ def check_link_arg(index=0, name=None):
             return func(*args, **kwargs)
         return decorated_function
     return decorator
+
+def trim_discord_link(link):
+    _, _, new_link = link.partition('discord.com/')
+    return new_link
