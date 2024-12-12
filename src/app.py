@@ -16,7 +16,7 @@ def app_redirect(link):
 @app.route('/b')
 @app.route('/a')
 def redirect_by_param():
-    link = request.args..get('link')
+    link = request.args.get('link')
     if link is None:
         return redirect(url_for('index'))
 
