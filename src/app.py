@@ -22,9 +22,9 @@ def redirect_by_param():
 
     route = request.path[-1:0]
     if route == 'a':
-        return redirect(url_for('app_redirect', link=link)
+        return redirect(url_for('app_redirect', link=link))
     elif route == 'b':
-        return redirect(url_for('browser_redirect', link=link)
+        return redirect(url_for('browser_redirect', link=link))
 
 @app.route('/<path:link>')
 @check_link_arg(name='link')
