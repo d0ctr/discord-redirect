@@ -20,11 +20,11 @@ def redirect_by_param():
     if link is None:
         return redirect(url_for('index'))
 
-    route = request.path[-1:0]
+    route = request.path[-1:]
     if route == 'a':
         return redirect(url_for('app_redirect', link=trim_discord_link(link)))
     elif route == 'b':
-        return redirect(url_for('browser_redirect', link=trim_discord_lin(link)))
+        return redirect(url_for('browser_redirect', link=trim_discord_link(link)))
 
 @app.route('/<path:link>')
 @check_link_arg(name='link')
@@ -37,4 +37,4 @@ def index():
     if link is None:
         return redirect('https://github.com/d0ctr/discord-redirect')
 
-    return redirect(url_for('redirect_index', link=trim_discord_lin(link)))
+    return redirect(url_for('redirect_index', link=trim_discord_link(link)))
